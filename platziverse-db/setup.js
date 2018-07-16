@@ -10,13 +10,13 @@ const prompt = inquirer.createPromptModule()
 async function setup () {
   const answer = await prompt([
     {
-      type:'confirm',
+      type: 'confirm',
       name: 'setup',
       message: 'This will destroy your database, are you sure?'
     }
   ])
 
-  if(!answer.setup){
+  if (!answer.setup) {
     return console.log('Nothing happened!')
   }
 
